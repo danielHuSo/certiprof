@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+    <title>Certiprof - DevOps</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<script>
+	let contextPath = getContextPath();
+	
+	function getContextPath() {
+		return window.location.pathname.substring(0, window.location.pathname.indexOf("/", 2));
+	}
+	
+	function validateSend() {
+		var name = document.getElementById("name").value;
+		name = name.trim();
+		
+		if(name.length == 0) {
+			alert('*** Please provide a non empty value ***');
+		} else {
+			setTimeout(() => {window.location.href = contextPath + "/greeting?name="+name;}, 1000);
+		}
+	}
+
+</script>
+<body>
+	<img src="./images/certiprof-large.png"/>
+    <p>Please type your name: <input type="text" id="name" /> <input type="button" value="Go" onclick="validateSend()"></p>
+</body>
+</html>
