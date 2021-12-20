@@ -49,21 +49,52 @@
             <groupId>org.springframework.boot</groupId>                <!-- for tomcat web container-->
             <artifactId>spring-boot-starter-tomcat</artifactId>
         </dependency>
-        
-		<dependency>
-		    <groupId>org.junit.jupiter</groupId>
-		    <artifactId>junit-jupiter-api</artifactId>
-		    <version>5.8.2</version>
-		    <scope>test</scope>
-		</dependency>
 	</dependencies>	
 
 	<build>
 		<finalName>certiprof</finalName>
-		<plugins>
+		<plugins>		
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+				<configuration>
+					<localCheckout>true</localCheckout> <!-- must be true -->
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+				</configuration>
+			</plugin>
+			<!-- http://www.eclipse.org/jetty/documentation/current/jetty-maven-plugin.html -->
+			<!-- Default is too old, update to latest to run the latest Spring 5 + jUnit 5 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.0</version>
+			</plugin>
+			<!-- Default 2.2 is too old, update to latest -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.2</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.6</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 

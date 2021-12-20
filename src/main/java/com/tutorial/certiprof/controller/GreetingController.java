@@ -1,16 +1,28 @@
 package com.tutorial.certiprof.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class GreetingController {
 
-	@GetMapping("/greeting")
-	public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-		model.addAttribute("name", name);
+	@RequestMapping(value = "/greeting", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT})
+	public String greeting(HttpServletRequest request, Model model) {
+		String firstName = request.getParameter("firstName");
+		String middleName = request.getParameter("middleName");
+		String lastName = request.getParameter("lastName");
+		
+		System.out.println(firstName);
+		System.out.println(middleName);
+		System.out.println(lastName);
+
+		model.addAttribute("firstName", firstName);
+		model.addAttribute("middleName", middleName);
+		model.addAttribute("lastName", lastName);
 		return "greeting";
 	}
 
