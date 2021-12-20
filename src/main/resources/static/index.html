@@ -12,24 +12,47 @@
 	}
 	
 	function validateSend() {
-		var name = document.getElementById("name").value;
+		var name = document.getElementById("firstName").value;
 		name = name.trim();
 		
 		if(name.length == 0) {
 			alert('*** Please provide a non empty value ***');
+			return false;
 		} else {
+			return true;
 			//setTimeout(() => {
-				window.location.href = contextPath + "/greeting?name="+name;
+				//window.location.href = contextPath + "/greeting";
 				//}, 1000);
 		}
 	}
 
 </script>
 <body>
-	<img src="./images/certiprof-large.png"/>
-    <br/>    
-    <p>Please type your name: <input type="text" id="name" /> <input type="button" value="Go" onclick="validateSend()"></p>
-    <br/>
 	<img src="./images/soyLider.png" width="450px"/>
+    <br/>    
+    <div>
+    	<label>Please enter your personal information</label>
+    </div>
+    <br/>
+    <br/>
+    <form id="userForm" name= "userForm" action="greeting" style="padding-left:40px" onsubmit = "return(validateSend());" method="POST">
+    	<div><b>* First name:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    		<input type="text" id="firstName" name="firstName"/>
+    	</div>
+    	<br/>  
+    	<div><b>* Middle name:</b>&nbsp;&nbsp;
+    		<input type="text" id="middleName" name="middleName"/>
+    	</div>
+    	<br/>  
+    	<div><b>* Last name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+    		<input type="text" id="lastName" name="lastName"/>
+    	</div>
+    	<br/>  
+    	<div>
+    		<input type="submit" value="Submit">
+    	</div>
+    </form>
+    <br/>
+	<img src="./images/certiprof-large.png"/>
 </body>
 </html>
