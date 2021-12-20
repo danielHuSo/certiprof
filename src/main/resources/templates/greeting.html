@@ -3,37 +3,89 @@
 <head> 
     <title>Getting Started: Serving Web Content</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="./js/jquery.js"></script>
+	<link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="./css/style.css" type="text/css"> 
 </head>
 <script>
 
 function goPrint() {
 
-    document.getElementById("print").style.visibility = "hidden";
+	$("#print").hide();
 	window.print();
-    document.getElementById("print").style.visibility = "visible";
+	$("#print").show();
 }
 </script>
 <body>
-	<img src="./images/soyLider.png" width="450px"/>
-    <br/>  
-    <p><b>Hello DevOps colleague please confirm your data:</b></p>
-    <div><b>* First name:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    		<label th:text="${firstName}"></label>
-    	</div>
-    	<br/>  
-    	<div><b>* Middle name:</b>&nbsp;&nbsp;
-    		<label th:text="${middleName}"></label>
-    	</div>
-    	<br/>  
-    	<div><b>* Last name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
-    		<label th:text="${lastName}"></label>
-    	</div>
-    	<br/> 
-    	
-    	<div>
-    		<input type="button" id="print" name="print" value="print" onclick="goPrint();">
-    	</div>   
-    		
-	<img src="./images/certiprof-large.png"/>
+<div class="row">
+	<div class="col">
+		<div class="gray-backg" >			
+			<div class="form-group" style="align-content: center;"> 
+				<div class="col">
+					<div class="form-group row">
+						<div class="col-md-3">
+							&nbsp;
+						</div>
+						<div class="col-md-1">
+							<img src="./images/soyLider.png" width="450px"/>
+						</div>
+						<div class="col-md-2">
+							&nbsp;
+						</div>
+				    </div>  
+				    
+				    
+				    <div class="form-group row">
+				    	<div class="col-md-3">
+							&nbsp;
+						</div>
+					    <div class="col-md-8">
+					    <b>Please enter your personal information.</b>
+					    </div>
+					</div>
+				    
+				    <div class="row">
+				    	<div class="col-md-4">
+							&nbsp;
+						</div>
+					    <div class="col-md-8">
+					    	<div class="form-group row">
+					    		<b>* First name:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					    		<label th:text="${firstName}"></label>
+					    	</div>  
+					    	<div class="form-group row">
+								<b>* Middle name:</b>&nbsp;&nbsp;
+					    		<label th:text="${middleName}"></label>
+					    	</div>
+					    	<div class="form-group row">
+								<b>* Last name:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					    		<label th:text="${lastName}"></label>
+					    	</div>
+					    	<div class="form-group row">
+								<b>* Birth date:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					    		<label th:text="${birthDate}"></label>
+					    	</div>
+					    	<div class="form-group row" style="padding-left: 50px">
+					    		<input type="button" id="print" name="print" value="Print" class="form-control col-md-2"  onclick="goPrint();">
+					    	</div>
+					    </div>
+				    </div>
+				        
+					<div class="form-group row">
+						<div class="col-md-3">
+							&nbsp;
+						</div>
+						<div class="col-md-1">
+						<img src="./images/certiprof-large.png"/>
+						</div>
+						<div class="col-md-2">
+							&nbsp;
+						</div>
+				    </div>    
+				</div>				
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>

@@ -1,0 +1,297 @@
+.merck-header { background-color: #03877b; }/*test*/
+.gray-backg { background-color: #f2f2f2; padding: 10px;}
+.small-buttons {background-color: #f2f2f2; margin-bottom: 3px;}
+.modal-buttons {background-color: #03877b;}
+.title-table-color{color: white;}
+.main-container { margin: 5px !important; }
+.close-form{ background-color: #662046}
+input[type=checkbox] {
+  transform: scale(1.5);
+}
+
+.transparency-menubar{
+    background-color: rgba(191, 184, 175, .5);
+    padding-top: 7px;
+    padding-bottom: 4px;
+}
+.icons-navbar{
+	margin-left: 15px;
+	margin-right: 5px;
+	color: white;
+}
+
+.table-title{
+    text-align: center;
+    font-size: 24px;
+}
+
+.table-buttons{
+    text-align: center;
+}
+.button-search{
+    text-align: right;
+}
+
+.images{
+    height: 250px;
+    width: 250px;
+    margin-left: 100px;
+}
+
+.confirm-request-title{
+    font-size: 28px;
+}
+
+.navbar-position{
+    margin-left: 50px;
+}
+
+.menu-login{
+    text-align: right;
+    margin-top: 5px;
+    background-color: #f2f2f2;
+    padding: 3px;
+}
+.button-logout{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 3px;
+}
+
+.footer-position{
+    color: white;
+    background-color:  #03877b;
+    position: relative;
+    
+}
+
+.panel-form{
+    border-bottom: 3px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+}
+.filter-panel{
+   margin-left: 10px;
+    margin-right: 30px;
+}
+
+.login-form{
+    background-color: rgba(255,255,255, .5);
+    margin-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.login-bkg{ background-image: url('../images/background.jpg') }
+.error-bkg{ 
+	background-image: url('../images/dirty-mockup-pattern-1583653.jpg');	
+	}	
+.modal{
+    position: fixed;
+    width: 100% ;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  
+  .modal-dialog {
+    position: fixed;
+    margin-top: 0;
+    margin-left: 10%;   
+    width: 150%;
+    height: 100%;
+    padding: 100px;
+    
+  }
+  
+  .modal-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;    
+    left: 0;
+    width: 170%;
+    box-shadow: none;
+  }
+  
+  .modal-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+    padding: 10px;
+    background-color: #03877b;
+    border: 0;
+    width: 100%;
+  }
+  
+  .modal-title {
+    font-weight: 300;
+    font-size: 2em;
+    color: #fff;
+    line-height: 30px;
+    width: 100%;
+  }
+  
+  .modal-body {
+    position: absolute;
+    top: 50px;
+    bottom: 60px;
+    width: 100%;
+    font-weight: 300;
+    overflow: auto;
+  }
+ .modal-open {
+    padding-right: 0px !important;
+}
+
+.cell-size{
+    font-size:90%;
+    text-align: center;
+}
+
+.invoicing-summary-ordered { border: 2px solid #03877b; margin-left: 10px; }
+.invoicing-controls { margin-right: 10px; margin-top: 10px;}
+.input-table{
+	width: 70px;
+}
+/*
+input[type="text"] {
+    width: 70px;
+}*/
+/************Custom modal for validations**************/
+.modalWindow {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: red;
+	z-index: 99999;
+	opacity:0;
+	pointer-events: none;
+	text-align:center;
+}
+.modalWindow:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalWindow > div {
+	width: 500px;
+	position: relative;
+	margin: 10% auto;
+	background: #fff;
+}
+
+
+
+.btn-file {
+    overflow: hidden;
+}
+
+.inputFile {
+	width: 5px;
+	height: 5px;
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+.file-caption .file-caption-name {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.file-caption.icon-visible .file-caption-icon {
+    display: inline-block;
+}
+
+.file-caption.icon-visible .file-caption-name {
+    padding-left: 15px;
+}
+
+.file-caption-icon {
+    left: 8px;
+}
+
+.custom-file-label_ipro {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+	height: calc(2.25rem + 2px);
+	padding: .375rem .75rem;
+	line-height: 1.5;
+	border: 1px solid #ced4da;
+}
+/*Custom dialog */
+.modal-dialog-c {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+}
+@media(max-width: 768px) {
+  .modal-dialog-c {
+    min-height: calc(100vh - 20px);
+  }
+}
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background:   rgba(0, 0, 0, .5);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+}
+.box-modal {
+    display: flex;
+    flex-direction: column;   
+}
+.box {
+	display: flex;	
+	flex-direction: row;
+	justify-content: space-between;
+}
+.box-children {
+	align-self: flex-end;
+}
+.control-disabled {
+	display: none;
+}
