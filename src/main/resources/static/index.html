@@ -2,7 +2,11 @@
 <html>
 <head> 
     <title>Certiprof - DevOps</title> 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script type="text/javascript" src="./js/jquery.js"></script> 
+	<link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="./css/style.css" type="text/css">
 </head>
 <script>
 	let contextPath = getContextPath();
@@ -12,7 +16,7 @@
 	}
 	
 	function validateSend() {
-		var name = document.getElementById("firstName").value;
+		var name = $("#firstName").val();
 		name = name.trim();
 		
 		if(name.length == 0) {
@@ -28,31 +32,77 @@
 
 </script>
 <body>
-	<img src="./images/soyLider.png" width="450px"/>
-    <br/>    
-    <div>
-    	<label>Please enter your personal information</label>
-    </div>
-    <br/>
-    <br/>
-    <form id="userForm" name= "userForm" action="greeting" style="padding-left:40px" onsubmit = "return(validateSend());" method="POST">
-    	<div><b>* First name:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    		<input type="text" id="firstName" name="firstName"/>
-    	</div>
-    	<br/>  
-    	<div><b>* Middle name:</b>&nbsp;&nbsp;
-    		<input type="text" id="middleName" name="middleName"/>
-    	</div>
-    	<br/>  
-    	<div><b>* Last name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
-    		<input type="text" id="lastName" name="lastName"/>
-    	</div>
-    	<br/>  
-    	<div>
-    		<input type="submit" value="Submit">
-    	</div>
-    </form>
-    <br/>
-	<img src="./images/certiprof-large.png"/>
+<div class="row">
+	<div class="col">
+		<div class="gray-backg">			
+			<div class="form-group" style="align-content: center;"> 
+				<div class="col">
+					<div class="form-group row">
+						<div class="col-md-3">
+							&nbsp;
+						</div>
+						<div class="col-md-1">
+							<img src="./images/soyLider.png" width="450px"/>
+						</div>
+						<div class="col-md-2">
+							&nbsp;
+						</div>
+				    </div>  
+				    
+				    
+				    <div class="form-group row">
+				    	<div class="col-md-3">
+							&nbsp;
+						</div>
+					    <div class="col-md-8">
+					    <b>Please enter your personal information.</b>
+					    </div>
+					</div>
+				    
+				    <div class="row">
+				    	<div class="col-md-3">
+							&nbsp;
+						</div>
+					    <div class="col-md-8">
+					    <form id="userForm" name= "userForm" action="greeting" style="padding-left:40px" onsubmit = "return(validateSend());" method="POST">
+					    	<div class="form-group row">
+					    		<b>* First name:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					    		<input type="text" id="firstName" name="firstName" class="form-control col-md-5"/>
+					    	</div>  
+					    	<div class="form-group row">
+								<b>* Middle name:</b>&nbsp;&nbsp;
+					    		<input type="text" id="middleName" name="middleName" class="form-control col-md-5"/>
+					    	</div>
+					    	<div class="form-group row">
+								<b>* Last name:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					    		<input type="text" id="lastName" name="lastName" class="form-control col-md-5"/>
+					    	</div>
+					    	<div class="form-group row">
+								<b>* Birth date:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					    		<input id="birthDate" name="birthDate" type="text" class="form-control col-md-2" placeholder="dd/mm/yyy"/>
+					    	</div>
+					    	<div class="form-group row" style="padding-left: 120px">
+					    		<input type="submit" value="Submit" class="form-control col-md-3">
+					    	</div>
+					    </form>
+					    </div>
+				    </div>
+				        
+					<div class="form-group row">
+						<div class="col-md-3">
+							&nbsp;
+						</div>
+						<div class="col-md-1">
+						<img src="./images/certiprof-large.png"/>
+						</div>
+						<div class="col-md-2">
+							&nbsp;
+						</div>
+				    </div>    
+				</div>				
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 </html>

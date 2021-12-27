@@ -15,14 +15,12 @@ public class GreetingController {
 		String firstName = request.getParameter("firstName");
 		String middleName = request.getParameter("middleName");
 		String lastName = request.getParameter("lastName");
-		
-		System.out.println(firstName);
-		System.out.println(middleName);
-		System.out.println(lastName);
+		String birthDate = request.getParameter("birthDate");
 
 		model.addAttribute("firstName", firstName);
 		model.addAttribute("middleName", middleName);
 		model.addAttribute("lastName", lastName);
+		model.addAttribute("birthDate", birthDate);
 		return "greeting";
 	}
 
