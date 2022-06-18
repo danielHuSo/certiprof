@@ -41,7 +41,7 @@ public class CertiprofApplicationTests {
         
         String result = greetingController.greeting(request, model);
         
-        assertEquals("greetingAAA", result);
+        assertEquals("greeting", result);
 	}
 
 }
