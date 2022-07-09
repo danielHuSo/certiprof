@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class GreetingController {
 
+
 	@RequestMapping(value = "/greeting", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT})
 	public String greeting(HttpServletRequest request, Model model) {
+
 		String firstName = request.getParameter("firstName");
 		String middleName = request.getParameter("middleName");
 		String lastName = request.getParameter("lastName");
