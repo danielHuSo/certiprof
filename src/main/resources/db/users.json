@@ -1,0 +1,24 @@
+[
+	{
+		"id": "1",
+		"name": "Daniel",
+		"lastName": "Huerta",
+		"birthDate": "01/01/2020",
+		"address": "MX"
+	},
+	{
+		"id": "2",
+		"name": "Miguel",
+		"lastName": "Gastua",
+		"birthDate": "01/01/2020",
+		"address": "CR"
+	},
+	{
+		"id": "3",
+		"name": "Jack",
+		"lastName": "Ziegler",
+		"birthDate": "01/01/2020",
+		"address": "US"
+	}
+
+]
