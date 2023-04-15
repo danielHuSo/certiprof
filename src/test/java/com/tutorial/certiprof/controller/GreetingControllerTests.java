@@ -1,4 +1,4 @@
-package com.tutorial.certiprof;
+package com.tutorial.certiprof.controller;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
@@ -15,12 +15,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.ui.ExtendedModelMap;
 import org.springframework.ui.Model;
 
+import com.tutorial.certiprof.CertiprofApplication;
 import com.tutorial.certiprof.controller.GreetingController;
 
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = CertiprofApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class CertiprofApplicationTests {
+public class GreetingControllerTests {
 
 	 
     @Mock
