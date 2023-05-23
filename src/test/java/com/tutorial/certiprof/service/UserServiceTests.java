@@ -1,6 +1,7 @@
 package com.tutorial.certiprof.service;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import java.io.IOException;
 import java.util.List;
@@ -36,6 +37,13 @@ public class UserServiceTests {
    
         User result = userService.getById("1");        
         assertNotNull(result);
+	}  
+    
+	@Test
+	public void getById_WhenNull() throws JsonParseException, JsonMappingException, IOException {				
+   
+        User result = userService.getById("10");        
+        assertNull(result);
 	}  
 
 }
