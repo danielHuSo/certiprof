@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class GreetingControllerA {
+public class GreetingController {
 
 	@RequestMapping(value = "/greeting", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT})
 	public String greeting(HttpServletRequest request, Model model) {
@@ -21,7 +21,7 @@ public class GreetingControllerA {
 		model.addAttribute("middleName", middleName);
 		model.addAttribute("lastName", lastName);
 		model.addAttribute("birthDate", birthDate);
-		return "greeting";
+		return "Hola";
 	}
 
 }
