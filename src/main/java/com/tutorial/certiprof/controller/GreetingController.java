@@ -21,7 +21,7 @@ public class GreetingController {
 		model.addAttribute("middleName", middleName);
 		model.addAttribute("lastName", lastName);
 		model.addAttribute("birthDate", birthDate);
-		return "Hola";
+		return "greeting";
 	}
 
 }
